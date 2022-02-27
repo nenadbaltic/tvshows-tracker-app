@@ -1,38 +1,379 @@
-.App {
+body {
+  font-family: "Roboto", sans-serif;
+  background: #202c37;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: #2b3945;
+}
+.header .wrapper > a {
+  font-size: 28px;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+.wrapper {
+  max-width: 1280px;
+  width: 95%;
+  margin: 0 auto;
+  color: #fff;
+  position: relative;
+}
+.header .wrapper {
+  display: flex;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav {
+  font-size: 18px;
+  font-weight: bold;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.nav button {
+  color: #fff;
+  border: 0px;
+  font-size: 18px;
+  font-weight: bold;
+  background: transparent;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  margin-left: 50px;
+}
+.nav a:hover,
+.nav a.is-active {
+  color: #216fbd;
+}
+.nav button:hover {
+  color: #fb1f1f;
+}
+.login-form {
+  max-width: 400px;
+  margin: 100px auto;
+  background: #2b3945;
+  padding: 30px 40px 40px;
+  border-radius: 4px;
+}
+.login-form h2 {
+  font-size: 26px;
+  padding-bottom: 8px;
+}
+.login-form p {
+  font-size: 17px;
+  padding-bottom: 25px;
+  line-height: 21px;
+}
+.login-form p a {
+  color: #216fbd;
+}
+.login-form p a:hover {
+  text-decoration: none;
+}
+.login-form label {
+  display: block;
+  font-size: 18px;
+  padding-bottom: 5px;
+}
+.login-form input {
+  border: 0px;
+  padding: 10px 15px;
+  width: 100%;
+  font-size: 18px;
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  font-family: "Roboto", sans-serif;
+}
+.login-form button,
+.notes button {
+  border: 0px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  min-width: 120px;
+  border-radius: 4px;
+  color: #fff;
+  background: #216fbd;
+  transition: 0.3s ease-in;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+.login-form button:hover,
+.notes button:hover {
+  color: #216fbd;
+  background: #fff;
+}
+.login-error {
+  color: #fb1f1f;
+  padding-bottom: 10px !important;
+}
+ul.tvshows-list {
+  margin: 80px 0;
+}
+.main ul.tvshows-list {
+  margin: 40px 0;
+}
+ul.tvshows-list li {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 26.5px;
+  background: #2b3945;
+  color: #fff;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  max-width: 300px;
+  min-height: 500px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+ul.tvshows-list li:hover {
+  opacity: 0.7;
+}
+ul.tvshows-list li:nth-child(4n) {
+  margin-right: 0;
+}
+ul.tvshows-list li img {
+  display: block;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+ul.tvshows-list li .text {
+  padding: 15px 10px;
+  font-size: 14px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.filter-search {
+  padding-top: 50px;
+}
+.filter-search input {
+  border: 0px;
+  padding: 6px 40px;
+  min-width: 300px;
+  outline: none;
+  border-radius: 4px;
+  background: #2b3945;
+  color: #fff;
+  height: 40px;
+  font-size: 16px;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+.loader {
+  margin: 10% auto;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loader img {
+  width: 100px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.show-details {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 80px 0;
+  /* align-items: center; */
 }
-
-.App-link {
-  color: #61dafb;
+/* .details-left {
+  position: relative;
+} */
+button.mark {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: 10px;
+  background: #216fbd;
+  color: #fff;
+  padding: 7px 12px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: "Roboto", sans-serif;
+  transition: 0.3s ease-in;
 }
+button.mark:hover {
+  background: #fff;
+  color: #216fbd;
+}
+.details-left img {
+  border-radius: 8px;
+}
+.details-right {
+  padding-left: 50px;
+}
+.details-right h3 {
+  font-size: 42px;
+  padding-bottom: 20px;
+}
+.details-right p {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 15px;
+}
+.overview {
+  padding-bottom: 2px !important;
+}
+.details-right p span {
+  font-weight: 300;
+  font-size: 18px;
+}
+.seasons {
+  padding-top: 20px;
+}
+.seasons > p {
+  padding-bottom: 8px;
+}
+.seasons ul li {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  max-width: 120px;
+}
+.seasons ul li img {
+  max-width: 120px;
+  border-radius: 4px;
+}
+.seasons ul li p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff !important;
+  padding-bottom: 0;
+}
+.episodes ul li img {
+  max-width: 100%;
+}
+/* .episodes ul li {
+  max-width: 200px;
+} */
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.notes {
+  padding-bottom: 80px;
+  width: 100%;
+  max-width: 100%;
+}
+.notes textarea {
+  border: 0px;
+  outline: none;
+  border-radius: 4px;
+  padding: 20px;
+  height: 48px;
+  min-height: 120px;
+  background: #2b3945;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.notes h4,
+.notes-list h3 {
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+.notes-list {
+  padding-top: 40px;
+}
+.notes-list h3 {
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #fff;
+}
+.notes-list li {
+  padding: 20px;
+  background: #2b3945;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+.notes-list li h5 {
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+.notes-list li p {
+  font-size: 17px;
+  line-height: 24px;
+}
+.no-shows {
+  padding-top: 40px;
+  font-size: 28px;
+}
+@media screen and (max-width: 1350px) {
+  .main ul.tvshows-list,
+  .filter-search {
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  ul.tvshows-list li {
+    margin: 0 10px 30px !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .show-details {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .details-right {
+    padding-left: 0;
+  }
+  .details-left img {
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .details-left img {
+    max-width: 80%;
+  }
+  .details-right h3 {
+    font-size: 34px;
+  }
+  .header .wrapper {
+    flex-direction: column;
+    min-height: 80px;
+    height: auto;
+  }
+  .header .wrapper > a {
+    font-size: 24px;
+    padding-top: 20px;
+  }
+  .nav li {
+    text-align: center;
+  }
+  .nav a {
+    display: block;
+    margin: 10px 0;
+  }
+  .nav button {
+    margin: 0px auto;
+    padding-bottom: 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .filter-search input {
+    min-width: 100%;
+    box-sizing: border-box;
   }
 }
